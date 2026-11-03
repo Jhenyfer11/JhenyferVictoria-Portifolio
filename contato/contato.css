@@ -20,6 +20,34 @@ body {
 }
 
 
+.menu {
+  display: none;
+}
+
+.menu img {
+  display: none;
+}
+
+header {
+  height: 165px;
+  unicode-bidi: isolate;
+}
+
+header button {
+  display: none;
+}
+
+header img {
+  width: 100px;
+}
+
+header .container-grid {
+  height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container-grid {
     width: 80vw;
     max-width: 1400px;
@@ -136,4 +164,100 @@ button {
 
 button:hover {
     opacity: 0.9;
+}
+
+
+@media (max-width: 946px) {
+
+.sidebar {
+    display: none;
+}
+
+  /* Menu hambúrguer */
+header {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ header .container-grid.menu {
+        display: flex;
+        width: 90%;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .container-grid.menu img {
+        display: block;
+        width: 65px;
+    }
+
+    header button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        padding: 10px;
+        z-index: 20;
+    }
+
+
+    header button svg {
+        width: 28px;
+        height: 28px;
+        fill: white;
+    }
+
+
+    #icone-x {
+        display: none;
+    }
+header button.ativo #icone-barras {
+        display: none;
+    }
+
+    header button.ativo #icone-x {
+        display: block;
+    }
+
+    /* Links do menu */
+
+    header nav#menu {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+        width: 190px;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        padding: 25px;
+
+        background: #111;
+        border: 1px solid #9d4edd;
+        border-radius: 12px;
+    }
+
+    header nav#menu.ativo {
+        display: flex;
+    }
+
+    header nav#menu a {
+        color: white;
+        text-decoration: none;
+        font-family: "Montserrat";
+        font-size: 15px;
+    }
 }
