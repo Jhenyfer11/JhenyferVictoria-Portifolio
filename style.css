@@ -1,14 +1,14 @@
+
 @font-face {
   font-family: "Montserrat";
   src: url(fonts/Montserrat-VariableFont_wght.ttf);
 }
 
-/*reset css*/
+/* Reset CSS */
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-
 }
 
 html {
@@ -19,43 +19,38 @@ body {
   background-color: black;
 }
 
-
 .container-grid {
   width: 80vw;
   max-width: 1400px;
-
-  /*margin 20px - Espaçamento externo de 20px */
-  /*margin 20px  10px - Espaçamento de 20px na vertical, 10px na horizontal*/
-  /*margin 20px  10px 5px - Espaçamento de 20px pra cima, 10px na horizontal, 5px para baixo*/
-  /*margin 20px 10px 5px 2px - Espaçamento 20px, para cima, 10px para a direita,, 5px para baixo, 2px para a esquerda*/
-
   margin: 0 auto;
 }
 
-
 .banner {
-  /* vh é a porcentagem da ALTURA da tela*/
-  /* vw é a porcentagem da LARGURA da tela*/
   height: 120vh;
-
   background-repeat: no-repeat;
-
   background-position: 165% 40%;
-
   position: relative;
 }
 
 header video {
-
   max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
+
 .menu {
-  display:none;
-  height: 0;
-}
- .menu img {
   display: none;
 }
+
+.menu img {
+  display: none;
+}
+
 header {
   height: 165px;
   unicode-bidi: isolate;
@@ -66,49 +61,47 @@ header button {
 }
 
 header img {
-  width: 100px
+  width: 100px;
 }
 
 header .container-grid {
   height: 0;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 .conteudo-banner {
-  height: 700px;
-
   display: flex;
   align-items: center;
-  margin-left: 300px;
+  margin-left: 18%;
+  height: 60vh;
+  width: 80vh;
+  flex-direction: row;
+  padding-top: 5%;
+  position: relative;
+  z-index: 2;
 }
 
 .conteudo-banner p {
   color: white;
-
   font-family: "Montserrat";
   font-weight: bold;
-  font-size: 32px;
+  font-size: 200%;
   line-height: 1.5;
 }
 
 .conteudo-banner img {
-  width: 150px;
+  width: 20vh;
   margin-right: 5%;
 }
 
 .conteudo-banner span {
   display: block;
-
   font-weight: normal;
-  font-size: 30px;
+  font-size: 90%;
   overflow: hidden;
-
   white-space: nowrap;
-
   border-right: 5px solid var(--laranja-gamifica);
 
   animation:
@@ -127,7 +120,6 @@ header .container-grid {
 }
 
 @keyframes cursor {
-
   from,
   to {
     border-color: transparent;
@@ -137,7 +129,6 @@ header .container-grid {
     border-color: var(--laranja-gamifica);
   }
 }
-
 
 /* Sidebar */
 .sidebar {
@@ -151,6 +142,7 @@ header .container-grid {
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
+  z-index: 10;
 }
 
 .sidebar img {
@@ -171,7 +163,6 @@ header .container-grid {
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
-
   font-family: "Montserrat";
   margin-top: 80px;
 }
@@ -185,13 +176,11 @@ main {
   margin-left: 70px;
 }
 
-
-
+/* Tecnologias */
 #tecnologias {
-
-  height: 800px;
+  height: 100vh;
   padding: 40px 5%;
-  margin-bottom: 20px;
+  margin-bottom: 10%;
   max-width: 95%;
 
   display: flex;
@@ -202,17 +191,12 @@ main {
   align-items: center;
 }
 
-
 #tecnologias h2 {
-  width: 430px;
-  height: 100px;
-
-
-  font-size: 30px;
+  width: 85vh;
+  height: 10vh;
+  font-size: 190%;
   font-family: "Montserrat";
-
   text-align: left;
-
   line-height: 1.8;
   font-weight: bold;
   color: white;
@@ -220,17 +204,12 @@ main {
 
 #tecnologias p {
   color: white;
-  width: 400px;
-  height: 120px;
-
-  font-size: 24px;
+  width: 70vh;
+  height: 30vh;
+  font-size: 160%;
   text-align: left;
-
   font-family: "Montserrat";
 }
-
-
-
 
 .l1,
 .l2,
@@ -238,7 +217,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 500px;
+  width: 80vh;
   height: 100px;
 }
 
@@ -247,47 +226,36 @@ main {
   border: 4px solid #c179dec5;
   padding: 2%;
   border-radius: 14px;
-
 }
 
+/* Sobre */
 #sobre {
   height: 800px;
   max-width: 95%;
-
   padding: 45px 5%;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-
 }
 
 #sobre h3 {
   font-size: 32px;
   font-family: "Montserrat";
-
   text-align: left;
-
   line-height: 1.8;
   font-weight: bold;
   color: white;
-
   margin-bottom: 15px;
-
 }
-
 
 #sobre p {
   width: 800px;
   color: white;
-
   font-family: "Montserrat";
   font-weight: 350;
-
   font-size: 18px;
   line-height: 1.8;
-
   margin-bottom: 80px;
 }
 
@@ -302,9 +270,7 @@ main {
   font-size: 18px;
   transition: 0.5s;
   font-weight: bold;
-
   font-family: "Montserrat";
-
 }
 
 #sobre a:hover {
@@ -316,35 +282,310 @@ main {
   flex-direction: row;
   align-items: center;
 }
-.contatar a{
+
+.contatar a {
   display: flex;
   margin-right: 2px;
+}
+
+/* =====================================
+   RESPONSIVIDADE - TABLETS
+===================================== */
+
+@media (max-width: 1194px) {
+
+  /* Banner: conteúdo acompanha a área do vídeo */
+  .conteudo-banner {
+    width: min(80vh, 75vw);
+    margin-left: 10%;
+  }
+
+  .conteudo-banner img {
+    width: clamp(90px, 16vw, 20vh);
+  }
+
+  .conteudo-banner p {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+  }
+
+  /* Tecnologias */
+  #tecnologias {
+    height: auto;
+    min-height: 100vh;
+    gap: 35px;
+  }
+
+  .texto-tecnologias {
+    width: 45%;
+    min-width: 0;
+  }
+
+  #tecnologias h2,
+  #tecnologias p {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  #tecnologias {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+
+  /* Bloco de texto */
+  .texto-tecnologias {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  #tecnologias h2,
+  #tecnologias p {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Conjunto de cards */
+  .icones {
+    width: 100%;
+    max-width: 500px;
+    min-width: 0;
+  }
+
+  .l1,
+  .l2,
+  .l3 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* SVGs mantêm suas proporções */
+  .icones svg {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0.5ch;
+  }
+
+
 
 }
 
 
+/* =====================================
+   RESPONSIVIDADE - CELULARES
+===================================== */
 
+@media (max-width: 946px) {
 
-
-
-
-
-
-
-
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 60px 20px;
-  }
-
+  /* Sidebar */
   .sidebar {
-    width: 55px;
+    display: none;
   }
 
   main {
-    margin-left: 55px;
+    margin-left: 0;
+  }
+
+  /* Menu hambúrguer */
+header {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ header .container-grid.menu {
+        display: flex;
+        width: 90%;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .container-grid.menu img {
+        display: block;
+        width: 65px;
+    }
+
+    header button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        padding: 10px;
+        z-index: 20;
+    }
+
+
+    header button svg {
+        width: 28px;
+        height: 28px;
+        fill: white;
+    }
+
+
+    #icone-x {
+        display: none;
+    }
+header button.ativo #icone-barras {
+        display: none;
+    }
+
+    header button.ativo #icone-x {
+        display: block;
+    }
+
+    /* Links do menu */
+
+    header nav#menu {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+        width: 190px;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        padding: 25px;
+
+        background: #111;
+        border: 1px solid #9d4edd;
+        border-radius: 12px;
+    }
+
+    header nav#menu.ativo {
+        display: flex;
+    }
+
+    header nav#menu a {
+        color: white;
+        text-decoration: none;
+        font-family: "Montserrat";
+        font-size: 15px;
+    }
+
+  /* Banner */
+  /* Não altera o vídeo, apenas adapta o conteúdo */
+
+  .conteudo-banner {
+    width: 90%;
+    max-width: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .conteudo-banner img {
+    width: clamp(70px, 18vw, 20vh);
+    max-width: 30%;
+    height: auto;
+    margin-right: 4%;
+  }
+
+  .conteudo-banner p {
+    font-size: clamp(1rem, 4vw, 2rem);
+    line-height: 1.5;
+  }
+
+  .conteudo-banner span {
+    font-size: clamp(0.7rem, 2.5vw, 1rem);
+  }
+
+
+  /* Tecnologias: texto e ícones em coluna */
+
+  #tecnologias {
+    width: 95%;
+    max-width: 95%;
+    height: auto;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  /* Bloco de texto */
+  .texto-tecnologias {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  #tecnologias h2,
+  #tecnologias p {
+    width: 100%;
+    height: auto;
+  }
+
+  #tecnologias h2 {
+    font-size: clamp(1.3rem, 5vw, 1.9rem);
+  }
+
+  #tecnologias p {
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
+  }
+
+
+
+  /* Sobre */
+  #sobre {
+    height: auto;
+    min-height: 800px;
+  }
+
+  #sobre p {
+    width: 100%;
+  }
+}
+
+
+/* =====================================
+   CELULARES PEQUENOS
+===================================== */
+
+@media (max-width: 380px) {
+
+  .conteudo-banner {
+    width: 94%;
+  }
+
+  .conteudo-banner img {
+    width: 70px;
+  }
+
+  .conteudo-banner p {
+    font-size: 1rem;
+  }
+
+  .conteudo-banner span {
+    font-size: 0.7rem;
   }
 }
